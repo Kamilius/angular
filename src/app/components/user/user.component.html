@@ -1,0 +1,10 @@
+<div class="user-elem" >
+  <img src={{user.avatar_url}} alt="avatar" class="avatar">
+  <div class="wraper">  
+    <h2> {{user.login}} </h2>
+    <div class="buttons">
+      <button><a href={{user.html_url}}>See profile</a></button>
+      <button (click)="switch()">See details</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.user-elem {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin: 5px;
+}
+
+.wraper {
+    margin: 5px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    margin: 0 10px;
+}

@@ -1,0 +1,20 @@
+<!-- <div *ngIf="this.details; then main else details "></div> -->
+    <!-- <ng-template #main [ngIf]="this.details" > -->
+    <header>
+        <input type="text" placeholder="Search..." [(ngModel)]="searchText">
+        <div>
+            <button>users</button>
+            <button>orgs</button>
+        </div>
+    </header>
+    <div *ngFor="let user of dataArray | filter: searchText">
+    <app-user [item]="user" (detailsChange)="changePage($event)"></app-user>
+    </div>
+    <footer>
+        <button class="nav-button">Previous Page</button>
+        <button class="nav-button">Next Page</button>
+    </footer>
+    <!-- </ng-template> -->
+    <!-- <ng-template #details [ngIf]="!this.details"> -->
+            <app-details (detailsChange)="changePage()" [user]="currentUser"></app-details>
+    <!-- </ng-template> -->

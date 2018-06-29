@@ -1,0 +1,29 @@
+<div class="wraper">
+  <div class="header">
+    <button (click)="update()">update Followers</button>
+  </div>
+  <div class="main">
+    <img src={{user?user.avatar_url:placeholder.avatar_url}} alt="avatar" class="avatar">
+    <div class="info">
+      <h3>{{user ? user.login : "username"}}</h3>
+      <p>
+        <span>followers: {{followers.length}}</span><br>
+        <span>following: number</span><br>
+        <span>public gists: number</span><br>
+        <span>public repos: number</span><br>
+        <span>member since: date</span><br>
+      </p>
+    </div>
+  </div>
+  <div class="followers" >
+    <img src={{f.avatar_url}} alt={{f.login}} class="follower-avatar" *ngFor="let f of followers">
+  </div>
+  <div class="subscr">
+    <h2>Subscriptions:</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit doloribus numquam temporibus ratione eligendi ut deleniti porro impedit, suscipit, debitis accusamus quam totam voluptatibus mollitia velit aut nam, aspernatur maiores?</p>
+  </div>
+  <div class="orgs">
+    <h2>Organisations</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, vero ad. Voluptate libero officia obcaecati laudantium, nostrum, ex ut temporibus quos placeat voluptates quas nam minima? Provident magni adipisci perspiciatis.</p>
+  </div>
+</div>
